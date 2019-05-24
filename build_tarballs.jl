@@ -3,19 +3,18 @@
 using BinaryBuilder
 
 name = "OpenJPEG"
-version = v"2.3.1"
+version = v"2.3.1"  # also change in script below
 
 # Collection of sources required to build OpenJPEGBuilder
 sources = [
-    "https://github.com/uclouvain/openjpeg.git" =>
-    "9b7620ee7a3d72bfcdbebd78e607c5ee8aa7fade",
-
+    "https://github.com/uclouvain/openjpeg/archive/v2.3.1.tar.gz" =>
+    "63f5a4713ecafc86de51bfad89cc07bb788e9bba24ebbf0c4ca637621aadb6a9",
 ]
 
 # Bash recipe for building across all platforms
 script = raw"""
 cd $WORKSPACE/srcdir
-cd openjpeg/
+cd openjpeg-2.3.1
 mkdir build
 cd build
 cmake .. -DCMAKE_BUILD_TYPE=Release -DBUILD_THIRDPARTY:BOOL=ON -DCMAKE_INSTALL_PREFIX=$prefix -DCMAKE_TOOLCHAIN_FILE=/opt/$target/$target.toolchain
