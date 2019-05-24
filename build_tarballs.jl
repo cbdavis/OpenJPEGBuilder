@@ -2,7 +2,7 @@
 # `julia build_tarballs.jl --help` to see a usage message.
 using BinaryBuilder
 
-name = "OpenJPEGBuilder"
+name = "OpenJPEG"
 version = v"2.3.1"  # also change in script below
 
 # Collection of sources required to build OpenJPEGBuilder
@@ -21,8 +21,6 @@ cmake .. -DCMAKE_BUILD_TYPE=Release -DBUILD_THIRDPARTY:BOOL=ON -DCMAKE_INSTALL_P
 make
 make install
 make clean
-exit
-
 """
 
 # These are the platforms we will build for by default, unless further

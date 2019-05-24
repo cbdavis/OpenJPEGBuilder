@@ -1,4 +1,4 @@
-# OpenJPEGBuilder builder
+# OpenJPEGBuilder
 
 This repository builds binary artifacts for the OpenJPEGBuilder project.
 This repository has a default .travis.yml file that can be used to build
